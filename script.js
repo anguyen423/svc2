@@ -18,3 +18,25 @@ function calculateLoan() {
         document.getElementById('result').innerText = 'Please fill in all fields.';
     }
 }
+
+document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let formData = {
+        name: document.querySelector('input[placeholder="Your Name"]').value,
+        email: document.querySelector('input[placeholder="Your Email"]').value,
+        phone: document.querySelector('input[placeholder="Your Phone"]').value,
+        message: document.querySelector('textarea[placeholder="Your Message"]').value
+    };
+
+    fetch("YOUR_DEPLOYED_WEB_APP_URL", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" }
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Data submitted successfully!");
+    })
+    .catch(error => console.error("Error:", error));
+});
