@@ -1,5 +1,6 @@
 function applyNow() {
     alert("Redirecting to the application form...");
+    window.location.href = "https://forms.gle/2jvKSYbXvdxb5B7Q9";
 }
 
 function calculateLoan() {
