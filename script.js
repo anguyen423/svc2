@@ -1,8 +1,7 @@
 function applyNow() {
     setTimeout(() => {
         window.location.href = "https://forms.gle/2jvKSYbXvdxb5B7Q9";
-    }, 1500); // Redirect after 1.5 seconds
-    alert("Redirecting to the application form...");
+    }, 1500); // Redirect after 1.5 seconds ;
 }
 
 function calculateLoan() {
